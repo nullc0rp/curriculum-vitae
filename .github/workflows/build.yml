@@ -15,9 +15,16 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup TeX Live
-      uses: tecosaur/setup-texlive@v1
-      with:
-        packages: 'scheme-full'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends \
+          texlive-latex-base \
+          texlive-latex-extra \
+          texlive-fonts-recommended \
+          texlive-fonts-extra \
+          texlive-latex-recommended \
+          texlive-xetex \
+          texlive-luatex
     
     - name: Compile LaTeX document
       working-directory: ./src
@@ -31,4 +38,3 @@ jobs:
         name: curriculum-pdf
         path: src/curriculum.pdf
         retention-days: 7
-
