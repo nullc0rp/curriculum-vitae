@@ -1,0 +1,134 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Use Helvetica (Arial-like) font for a modern, minimalist look
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{left=1.5cm,right=1.5cm,marginparwidth=0cm,marginparsep=0cm,top=1.2cm,bottom=1.2cm}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.1}
+
+% Minimalist dark theme
+\definecolor{heading}{HTML}{000000}
+\definecolor{accent}{HTML}{000000}
+\definecolor{emphasis}{HTML}{000000}
+\definecolor{body}{HTML}{333333}
+\colorlet{name}{accent}
+\colorlet{tagline}{body}
+\colorlet{headingrule}{heading}
+\colorlet{headingbg}{accent}
+\colorlet{accenttext}{emphasis}
+
+\name{Dan Borgogno}
+\tagline{Security Researcher \& Security Engineer}
+\personalinfo{
+  \email{danborgogno@gmail.com}
+  \phone{+54 9 358 4384 096}
+  \location{Córdoba, Argentina}
+  \linkedin{linkedin.com/in/danborgogno}
+  \github{github.com/danborgogno}
+}
+
+\begin{document}
+\makecvheader
+
+\cvsection{Profile}
+Security Engineer and researcher with 12+ years of experience in offensive security, cloud architecture, and automated security platforms. Led security programs for fintech and cyber-insurance companies, architected AI-powered vulnerability assessment platforms, and discovered critical vulnerabilities in national infrastructure. International speaker at DEF CON (main track) and ekoparty. Expert in Android security, reverse engineering, and payment systems.
+
+\cvsection{Experience}
+
+\cvevent{Principal Security Engineer / Acting CISO}{Latu Seguros, Córdoba}{Oct 2022 -- Aug 2025}{Cyber-insurance startup}
+\begin{itemize}
+  \item Architected and led all security initiatives as sole security leader, establishing security foundation from ground zero
+  \item Built enterprise-grade AWS security infrastructure (IAM, Cognito, GuardDuty, CloudWatch, Config) and deployed CrowdStrike EDR
+  \item Performed security code reviews and penetration testing across all production systems
+  \item Architected and developed AI-powered automated attack-surface assessment platform:
+    \begin{itemize}
+      \item Distributed orchestration system managing multiple security scanning tools (Nmap, Nuclei, Burp Suite)
+      \item Automated security assessments including attack surface discovery, vulnerability detection, web service analysis, and email security
+      \item Integrated Anthropic Claude LLM with custom agentic framework for iterative security analysis and vulnerability exploration
+      \item Developed proprietary scoring algorithms and automated reporting engine
+    \end{itemize}
+  \item Led security assessments for enterprise clients including code audits, cloud configuration reviews, and IPAF validation
+  \item Executed manual penetration tests for major financial institutions, identifying critical vulnerabilities
+\end{itemize}
+
+\divider
+
+\cvevent{Security Engineer (Red/Blue Team \& Architecture)}{NaranjaX, Córdoba}{Apr 2020 -- Oct 15, 2022}{Fintech / Digital Banking}
+\begin{itemize}
+  \item Led penetration testing and security assessments for critical financial services infrastructure
+  \item Enhanced threat detection capabilities across red and blue teams, reducing mean time to detection
+  \item Architected secure system designs and established security training programs
+\end{itemize}
+
+\divider
+
+\cvevent{Back-end \& Cloud Services Developer}{MercadoLibre, Córdoba}{Feb 2019 -- Apr 2020}{E-commerce and logistics platform}
+\begin{itemize}
+  \item Developed high-throughput backend systems (Java \& Go) for logistics operations serving millions of transactions
+  \item Built scalable microservices and REST APIs leveraging distributed data stores and AWS infrastructure
+\end{itemize}
+
+\divider
+
+\cvevent{Java Developer / SDL Champion}{McAfee (Intel Security), Córdoba}{Aug 2015 -- Jul 2019}{Cybersecurity product division}
+\begin{itemize}
+  \item Developed core components for McAfee Active Response, a leading enterprise threat detection platform
+  \item Served as Security Development Lifecycle Champion, establishing secure coding standards
+  \item Led global threat-hunting engineering team as Scrum Master
+\end{itemize}
+
+\divider
+
+\cvevent{Freelance Security Consultant \& Researcher}{Independent, Córdoba}{2013 -- Present}{}
+\begin{itemize}
+  \item Custom penetration testing and security audits for enterprise clients
+  \item Expert in Android application security using Frida and reverse engineering (Ghidra, JADX)
+  \item Discovered critical vulnerabilities in SUBE (national transportation) and DNI Digital Argentino (national digital identity)
+\end{itemize}
+
+\cvsection{Security Research \& Talks}
+\begin{itemize}
+  \item \textbf{DEF CON (Main Track, 2024)} — "Invisible Transactions: Hacking Screenless Bluetooth POS Devices" (with Ileana Barrionuevo). Research on mobile POS vulnerabilities impacting IoT, NFC, and EMV payment security
+  \item \textbf{Ekoparty 2020} — "Hacking the Digital DNI" (Best Talk Award). Security research on Argentina's national digital identity system
+  \item \textbf{Ekoparty 2019} — "Free rides! SUBE, REDBUS, SATBUS and others" (Best Talk Award). Vulnerabilities in national transportation payment systems
+\end{itemize}
+
+\cvsection{Technical Skills}
+
+\cvtag{Offensive Security}
+\cvtag{Penetration Testing}
+\cvtag{Reverse Engineering}
+\cvtag{Cloud Security}
+\cvtag{Android Security}
+\cvtag{Web Application Security}
+
+\divider
+
+\textbf{Languages:} Go, Java, Python, Kotlin, Ruby, C/C++, Assembly, JavaScript/TypeScript, Bash, SQL
+
+\textbf{Cloud \& Infrastructure:} AWS (IAM, Cognito, GuardDuty, CloudWatch, Lambda, EC2, S3, VPC), Docker, Kubernetes, Terraform
+
+\textbf{Offensive Tools:} Burp Suite, Nmap, Metasploit, Nuclei, SQLMap, GraphQL testing, Wireshark, Hashcat, Hydra
+
+\textbf{Reverse Engineering:} Frida (expert), Ghidra, IDA Pro, JADX, APKtool, Objection, MobSF
+
+\textbf{Defensive Security:} CrowdStrike EDR, ELK Stack, AWS GuardDuty, CloudWatch, Google Workspace
+
+\textbf{Methodologies:} OSCP-level testing, OWASP Top 10, PTES, threat modeling, secure SDLC, red/blue team exercises
+
+\cvsection{Education}
+\cvevent{National University of Río Cuarto, Córdoba}{Computer Science / Systems Analyst}{2008 -- 2014}{GPA 7.3/10}
+
+\cvsection{Awards \& Recognition}
+\begin{itemize}
+  \item \textbf{Best Talk Award — Ekoparty 2019 \& 2020}
+  \item \textbf{DEF CON Main Track Speaker — 2024}
+\end{itemize}
+
+\cvsection{Languages}
+\cvtag{Spanish (Native)} \cvtag{English (Advanced / Professional)}
+
+\end{document}
+
