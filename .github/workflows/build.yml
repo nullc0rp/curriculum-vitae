@@ -26,15 +26,28 @@ jobs:
           texlive-xetex \
           texlive-luatex
     
-    - name: Compile LaTeX document
+    - name: Compile main LaTeX document
       working-directory: ./src
       run: |
         pdflatex -interaction=nonstopmode curriculum.tex
         pdflatex -interaction=nonstopmode curriculum.tex
     
-    - name: Upload PDF artifact
+    - name: Compile shortened LaTeX document
+      working-directory: ./resources
+      run: |
+        pdflatex -interaction=nonstopmode curriculum_shortened.tex
+        pdflatex -interaction=nonstopmode curriculum_shortened.tex
+    
+    - name: Upload main PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: curriculum-pdf
         path: src/curriculum.pdf
+        retention-days: 7
+    
+    - name: Upload shortened PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: curriculum-shortened-pdf
+        path: resources/curriculum_shortened.pdf
         retention-days: 7

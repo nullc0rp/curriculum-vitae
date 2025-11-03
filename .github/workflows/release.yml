@@ -24,15 +24,23 @@ jobs:
           texlive-xetex \
           texlive-luatex
     
-    - name: Compile LaTeX document
+    - name: Compile main LaTeX document
       working-directory: ./src
       run: |
         pdflatex -interaction=nonstopmode curriculum.tex
         pdflatex -interaction=nonstopmode curriculum.tex
     
-    - name: Upload PDF as release asset
+    - name: Compile shortened LaTeX document
+      working-directory: ./resources
+      run: |
+        pdflatex -interaction=nonstopmode curriculum_shortened.tex
+        pdflatex -interaction=nonstopmode curriculum_shortened.tex
+    
+    - name: Upload PDFs as release assets
       uses: softprops/action-gh-release@v1
       with:
-        files: src/curriculum.pdf
+        files: |
+          src/curriculum.pdf
+          resources/curriculum_shortened.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
