@@ -1,0 +1,31 @@
+# LaTeX compilation artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Old files
+Resume_old.pdf
+*.zip
+
+# AltaCV source (we only need the .cls file)
+AltaCV-main/
+altacv.zip
+
+# Optional: exclude compiled PDF from repo (GitHub Actions will generate it)
+# Uncomment if you don't want to track the PDF
+# *.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+

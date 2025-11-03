@@ -1,0 +1,32 @@
+name: Build and Release PDF
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup TeX Live
+      uses: tecosaur/setup-texlive@v1
+      with:
+        packages: 'scheme-full'
+    
+    - name: Compile LaTeX document
+      working-directory: ./src
+      run: |
+        pdflatex -interaction=nonstopmode curriculum.tex
+        pdflatex -interaction=nonstopmode curriculum.tex
+    
+    - name: Upload PDF as release asset
+      uses: softprops/action-gh-release@v1
+      with:
+        files: src/curriculum.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

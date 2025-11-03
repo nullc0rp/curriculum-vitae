@@ -1,0 +1,142 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,marginparwidth=0cm,marginparsep=0cm,top=1.2cm,bottom=1.2cm}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.1}
+
+% Minimalist dark theme
+\definecolor{heading}{HTML}{000000}
+\definecolor{accent}{HTML}{000000}
+\definecolor{emphasis}{HTML}{000000}
+\definecolor{body}{HTML}{333333}
+\colorlet{name}{accent}
+\colorlet{tagline}{body}
+\colorlet{headingrule}{heading}
+\colorlet{headingbg}{accent}
+\colorlet{accenttext}{emphasis}
+
+\name{Dan Borgogno}
+\tagline{Security Researcher \& Principal Security Engineer}
+\personalinfo{
+  \email{danborgogno@gmail.com}
+  \phone{+54 9 358 4384 096}
+  \location{Córdoba, Argentina}
+  \linkedin{linkedin.com/in/danborgogno}
+  \github{github.com/danborgogno}
+}
+
+\begin{document}
+\makecvheader
+
+\cvsection{Profile}
+Principal Security Engineer and internationally recognized security researcher with over 12 years of experience building and securing enterprise systems. Expert in offensive security, cloud architecture, and automated security platforms. Led security programs for fintech and cyber-insurance companies, architected AI-powered vulnerability assessment platforms, and discovered critical vulnerabilities in national critical infrastructure. International speaker at DEF CON (main track) and ekoparty. Specialized in Android security research, reverse engineering, and payment system security.
+
+\cvsection{Experience}
+
+\cvevent{Principal Security Engineer / Acting CISO}{Latu Seguros, Córdoba}{Oct 2022 -- Aug 2025}{Cyber-insurance startup}
+\begin{itemize}
+  \item Architected and led all security initiatives as sole security leader for cyber-insurance startup, establishing security foundation from ground zero
+  \item Established comprehensive security program covering governance, risk management, policies, and incident response procedures
+  \item Architected and implemented enterprise-grade AWS security infrastructure including IAM, Cognito, GuardDuty, CloudWatch, Config, S3 encryption, and VPC security controls
+  \item Deployed and managed enterprise endpoint protection (CrowdStrike EDR) and identity management (Google Workspace) with zero security incidents
+  \item Performed security code reviews and penetration testing across all production systems, reducing vulnerability exposure by implementing secure development practices
+  \item Architected and developed AI-powered automated attack-surface assessment platform from concept to production:
+    \begin{itemize}
+      \item Built distributed orchestration system managing multiple security scanning tools (Nmap, Nuclei, Burp Suite) across scalable worker infrastructure
+      \item Automated comprehensive security assessments including attack surface discovery, vulnerability detection, web service analysis, information leak detection, email security (SPF/DKIM/DMARC), and phishing susceptibility testing
+      \item Integrated Anthropic Claude LLM with custom agentic framework enabling iterative security analysis, automated vulnerability exploitation scenario generation, and intelligent attack vector exploration
+      \item Developed proprietary scoring algorithms and automated reporting engine generating actionable security assessments
+    \end{itemize}
+  \item Led security assessments for enterprise clients including code repository audits, cloud configuration reviews, and IPAF questionnaire validation, directly impacting cyber-insurance underwriting decisions
+  \item Executed comprehensive manual penetration tests for major financial institutions and payment gateways, identifying critical vulnerabilities that enabled clients to prevent potential security breaches
+\end{itemize}
+
+\divider
+
+\cvevent{Security Engineer (Red/Blue Team \& Architecture)}{NaranjaX, Córdoba}{Apr 2020 -- Oct 15, 2022}{Fintech / Digital Banking}
+\begin{itemize}
+  \item Led penetration testing and security assessments for critical financial services infrastructure including web applications, mobile apps, and backend APIs
+  \item Collaborated across red and blue teams to enhance threat detection capabilities, reducing mean time to detection and improving security posture
+  \item Architected secure system designs for sensitive financial data handling and implemented defensive security controls
+  \item Established security training programs and delivered workshops to development teams, fostering security-first culture across engineering organization
+  \item Developed automated security tooling for vulnerability scanning, misconfiguration detection, and CI/CD pipeline security integration
+\end{itemize}
+
+\divider
+
+\cvevent{Back-end \& Cloud Services Developer}{MercadoLibre, Córdoba}{Feb 2019 -- Apr 2020}{E-commerce and logistics platform}
+\begin{itemize}
+  \item Developed high-throughput backend systems (Java \& Go) for package lifecycle and logistics operations serving millions of transactions
+  \item Built scalable microservices, REST APIs, and system integrations leveraging distributed data stores (KVS, relational databases) and AWS infrastructure
+  \item Contributed to system reliability improvements and monitoring solutions for critical logistics operations
+\end{itemize}
+
+\divider
+
+\cvevent{Java Developer / SDL Champion}{McAfee (Intel Security), Córdoba}{Aug 2015 -- Jul 2019}{Cybersecurity product division}
+\begin{itemize}
+  \item Developed core backend components and web UI for McAfee Active Response, a leading enterprise threat detection and response platform
+  \item Served as Security Development Lifecycle (SDL) Champion, establishing secure coding standards and review processes across development teams
+  \item Designed and prototyped advanced post-intrusion detection capabilities and forensic analysis features
+  \item Led global threat-hunting engineering team as Scrum Master, mentoring engineers and driving product development initiatives
+\end{itemize}
+
+\divider
+
+\cvevent{Freelance Security Consultant \& Researcher}{Independent, Córdoba}{2013 -- Present}{}
+\begin{itemize}
+  \item Delivered custom penetration testing, security audits, and exploit development services for enterprise clients across financial, government, and technology sectors
+  \item Recognized expert in Android application security, specializing in dynamic analysis using Frida and advanced reverse engineering techniques
+  \item Discovered critical security vulnerabilities in national critical infrastructure systems including SUBE (national transportation payment system) and DNI Digital Argentino (national digital identity), leading to security improvements
+  \item Conducted security research on Android applications, NFC payment systems, and IoT devices using advanced reverse engineering tools (Ghidra, JADX)
+\end{itemize}
+
+\cvsection{Security Research \& Talks}
+\begin{itemize}
+  \item \textbf{DEF CON (Main Track, 2024)} — "Invisible Transactions: Hacking Screenless Bluetooth POS Devices" (co-presented with Ileana Barrionuevo). Groundbreaking research on mobile POS vulnerabilities, significantly impacting understanding of IoT, NFC, and EMV payment system security
+  \item \textbf{Ekoparty Security Conference, 2020} — "Hacking the Digital DNI" (Best Talk Award). Comprehensive security research on Argentina's national digital identity system, leading to security enhancements
+  \item \textbf{Ekoparty Security Conference, 2019} — "Free rides! SUBE, REDBUS, SATBUS and others" (Best Talk Award). Pioneering research revealing critical vulnerabilities in national public transportation payment systems
+  \item Expert in Android application security auditing using Frida, with proven track record of discovering vulnerabilities in high-security applications including national identity and payment systems
+  \item Research expertise spans Android Security (Frida, reverse engineering), IoT Security, NFC \& EMV Payments, Payment Systems, and Bluetooth Security protocols
+\end{itemize}
+
+\cvsection{Technical Skills}
+
+\cvtag{Offensive Security}
+\cvtag{Penetration Testing}
+\cvtag{Reverse Engineering}
+\cvtag{Cloud Security}
+\cvtag{Android Security}
+\cvtag{Web Application Security}
+\cvtag{Secure Architecture}
+
+\divider
+
+\textbf{Languages:} Go, Java, Python, Kotlin, Ruby, C/C++, Assembly (x86/x64, ARM), JavaScript/TypeScript, Bash, SQL
+
+\textbf{Cloud \& Infrastructure:} AWS (IAM, Cognito, CloudWatch, GuardDuty, Config, Lambda, EC2, S3, VPC, CloudTrail), Docker, Kubernetes, Terraform, CI/CD pipelines
+
+\textbf{Offensive Security Tools:} Burp Suite Professional, Nmap, Metasploit Framework, Nuclei, SQLMap, GraphQL security testing, Wireshark, Hashcat, John the Ripper, Hydra, Aircrack-ng suite
+
+\textbf{Reverse Engineering \& Mobile:} Frida (expert), Ghidra, IDA Pro, JADX, APKtool, Objection, MobSF, Radare2, GDB/LLDB
+
+\textbf{Payment Systems \& IoT:} NFC security analysis, Bluetooth/BLE protocol analysis, EMV chip card security, POS device assessment, embedded systems security
+
+\textbf{Defensive Security:} CrowdStrike Falcon EDR, ELK Stack (Elasticsearch, Logstash, Kibana), AWS GuardDuty, CloudWatch, Google Workspace administration, SIEM integration
+
+\textbf{Methodologies:} OSCP-level penetration testing, OWASP Top 10/Mobile/API, PTES, threat modeling (STRIDE, DREAD), secure SDLC, red/blue/purple team exercises, incident response
+
+\cvsection{Education}
+\cvevent{National University of Río Cuarto, Córdoba}{Computer Science / Systems Analyst}{2008 -- 2014}{GPA 7.3/10}
+
+\cvsection{Awards \& Recognition}
+\begin{itemize}
+  \item \textbf{Best Talk Award — Ekoparty 2019:} "Free rides! SUBE, REDBUS, SATBUS and others"
+  \item \textbf{Best Talk Award — Ekoparty 2020:} "Hacking the Digital DNI"
+  \item \textbf{DEF CON Main Track Speaker — 2024:} Selected for premier security conference main track
+\end{itemize}
+
+\cvsection{Languages}
+\cvtag{Spanish (Native)} \cvtag{English (Advanced / Professional)}
+
+\end{document}
